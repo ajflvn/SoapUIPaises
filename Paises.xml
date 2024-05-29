@@ -2042,12 +2042,12 @@ public void writeReportToDisk(String htmlPage) {
     projectName = project.getName()
     String baseLoc = project.getPropertyValue("testDataPath");
     if (baseLoc == null || "".equals(baseLoc)) {
-	baseLoc = "C:\\SoapUI_ExecutionResults\\"
-	//UISupport.showInfoMessage('There was not project-level property "testDataPath" defined.\nThe report will be saved in C:/Tools/Reports.')
+        baseLoc = "C:\\SoapUI_ExecutionResults\\"
+        //UISupport.showInfoMessage('There was not project-level property "testDataPath" defined.\nThe report will be saved in C:/Tools/Reports.')
     }
     
     // Create a File object representing the target folder
-    def folder = new File( baseLoc + "Execution results" )
+    def folder = new File( baseLoc + "Paises" )
  
     // If it doesn't exist
     if( !folder.exists() ) {
