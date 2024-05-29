@@ -1326,4 +1326,740 @@ map.each { sISOCode, sName ->
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3fbdbf33-04ad-4d85-b482-98af102ba221" name="SOAP Response"/><con:assertion type="Schema Compliance" id="fc41aaf7-eb93-4e0b-a377-420774978f56" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="fd4d2c67-c136-4dcb-862e-d4cdd66b6646" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="e3dcc6f7-a047-4c6a-884d-6aaab50e5953" name="Not Contains"><con:configuration><token>Country not found in the database</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="a2f19d6f-3c2a-4e03-88bf-ee40e913b835" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
 
-//m:sName</path><content>${Propiedades#Name}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/FullCountryInfoRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="delay" name="NoOp" id="74898e45-bdc5-406d-8331-488b34bc4f9f"><con:settings/><con:config><delay>0</delay></con:config></con:testStep><con:properties><con:property><con:name>mapIsoName</con:name><con:value><![CDATA[{"AD":"Andorra","AE":"United Arab Emirates","AF":"Afghanistan","AG":"Antigua & Barbuda","AI":"Anguilla","AL":"Albania","AM":"Armenia","AN":"Netherlands Antilles","AO":"Angola","AQ":"Antarctica","AR":"Argentina","AS":"American Samoa","AT":"Austria","AU":"Australia","AW":"Aruba","AX":"\u00c5land Islands","AZ":"Azerbaijan","BA":"Bosnia & Herzegovina","BB":"Barbados","BD":"Bangladesh","BE":"Belgium","BF":"Burkina Faso","BG":"Bulgaria","BH":"Bahrain","BI":"Burundi","BJ":"Benin","BL":"Saint Barth\u00e9lemy","BM":"Bermuda","BN":"Brunei-Darussalam","BO":"Bolivia","BQ":"Bonaire, Sint Eustatius and Saba","BR":"Brazil","BS":"Bahamas","BT":"Bhutan","BV":"Bouvet Island","BW":"Botswana","BY":"Belarus","BZ":"Belize","CA":"Canada","CC":"Cocos (Keeling) Islands","CD":"Congo, Democratic Republic","CF":"Central African Republic","CG":"Congo","CH":"Switzerland","CI":"C\u00f4te D'Ivoire (Ivory Coast)","CK":"Cook Islands","CL":"Chile","CM":"Cameroon","CN":"China","CO":"Colombia","CR":"Costa Rica","CU":"Cuba","CV":"Cape Verde","CW":"Cura\u00e7ao","CX":"Chrismas Island","CY":"Cyprus","CZ":"Czech Republic","DE":"Germany","DJ":"Djibouti","DK":"Denmark","DM":"Dominica","DO":"Dominican Republic","DZ":"Algeria","EC":"Ecuador","EE":"Estonia","EG":"Egypt","EH":"Western Sahara","ER":"Eritrea","ES":"Spain","ET":"Ethiopia","FI":"Finland","FJ":"Fiji","FK":"Falkand Islands (Malvinas)","FM":"Micronesia  (Federa States of)","FO":"Faroe Islands","FR":"France","GA":"Gabon","GB":"United Kingdom","GD":"Grenada","GE":"Georgia","GF":"French Guiana","GH":"Ghana","GI":"Gibraltar","GL":"Greenland","GM":"Gambia","GN":"Guinea","GP":"Guadeloupe","GQ":"Equatorial Guinea","GR":"Greece","GS":"South Georgia & South Sandwich Islands","GT":"Guatemala","GU":"Guam","GW":"Guinea-Bissau","GY":"Guyana","HK":"Hong Kong","HM":"Heard Island And McDonald Islands","HN":"Honduras","HR":"Croatia","HT":"Haiti","HU":"Hungary","ID":"Indonesia","IE":"Ireland","IL":"Israel","IN":"India","IO":"British Indian Ocean Territory","IQ":"Iraq","IR":"Iran","IS":"Iceland","IT":"Italy","JM":"Jamaica","JO":"Jordan","JP":"Japan","KE":"Kenya","KG":"Kyrgyzstan","KH":"Cambodia","KI":"Kiribati","KM":"Comoros","KN":"St. Kitts & Nevis","KP":"North Korea","KR":"South Korea","KW":"Kuwait","KY":"Cayman Islands","KZ":"Kazakhstan","LA":"Laos","LB":"Lebanon","LC":"St. Lucia","LI":"Liechtenstein","LK":"Sri Lanka","LR":"Liberia","LS":"Lesotho","LT":"Lithuania","LU":"Luxembourg","LV":"Latvia","LY":"Libyan Arab Jamahiriya","MA":"Morocco","MC":"Monaco","MD":"Moldova, Republic of","ME":"Montenegro","MF":"Collectivity of Saint Martin","MG":"Madagascar","MH":"Marshall Islands","MK":"Macedonia  (former YR)","ML":"Mali","MM":"Myanmar (Burma)","MN":"Mongolia","MO":"Macao","MP":"Northern Mariana Islands","MQ":"Martinique","MR":"Mauritania","MS":"Montserrat","MT":"Malta","MU":"Mauritius","MV":"Maldives (Maladive Ilands)","MW":"Malawi","MX":"Mexico","MY":"Malaysia","MZ":"Mozambique","NA":"Namibia","NC":"New Caledonia","NE":"Niger","NF":"Norfolk Island","NG":"Nigeria","NI":"Nicaragua","NL":"Netherlands","NO":"Norway","NP":"Nepal","NR":"Nauru","NU":"Niue","NZ":"New Zealand","OM":"Oman","PA":"Panama","PE":"Peru","PF":"French Polynesia","PG":"Papua-New Guinea","PH":"Philippines","PK":"Pakistan","PL":"Poland","PM":"Saint Pierre And Micquelon","PN":"Pitcairn","PR":"Puerto Rico","PS":"Palestinian Territory, Occupied","PT":"Portugal","PW":"Palau","PY":"Paraguay","QA":"Quatar","RE":"Reunion","RO":"Romania","RS":"Serbia","RU":"Russian Federation","RW":"Rwanda","SA":"Saudi Arabia","SB":"Solomon Islands","SC":"Seychelles","SD":"Sudan","SE":"Sweden","SG":"Singapore","SH":"Saint Helena, Ascension and Tristan da Cunha","SI":"Slovenia","SJ":"Svalbard And Jan Mayen","SK":"Slovakia","SL":"Sierra Leone","SM":"San Marino","SN":"Senegal","SO":"Somalia","SR":"Suriname","ST":"Sao Tome & Principe","SV":"El Salvador","SX":"Sint-Maarten","SY":"Syrian Arab Republic","SZ":"Swaziland","TC":"Turks And Caicos Islands","TD":"Chad","TF":"French Southern Territories","TG":"Togo","TH":"Thailand","TJ":"Tajikistan","TK":"Tokelau","TL":"Timor-Leste","TM":"Turkmenistan","TN":"Tunisia","TO":"Tonga","TR":"Turkey","TT":"Trinidad & Tobago","TV":"Tuvalu","TW":"Taiwan","TZ":"Tanzania","UA":"Ukraine","UG":"Uganda","UM":"United States Minor Outlying Islands","US":"United States","UY":"Uruguay","UZ":"Uzbekistan","VA":"Vatican City","VC":"St. Vincent & Grenadines","VE":"Venezuela","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","VN":"Vietnam","VU":"Vanuatu","WF":"Wallis And Futuna","WS":"Western Samoa","YE":"Yemen","YT":"Mayotte","ZA":"South Africa","ZM":"Zambia","ZW":"Zimbabwe"}]]></con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+//m:sName</path><content>${Propiedades#Name}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/FullCountryInfoRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="delay" name="NoOp" id="74898e45-bdc5-406d-8331-488b34bc4f9f"><con:settings/><con:config><delay>0</delay></con:config></con:testStep><con:properties><con:property><con:name>mapIsoName</con:name><con:value><![CDATA[{"AD":"Andorra","AE":"United Arab Emirates","AF":"Afghanistan","AG":"Antigua & Barbuda","AI":"Anguilla","AL":"Albania","AM":"Armenia","AN":"Netherlands Antilles","AO":"Angola","AQ":"Antarctica","AR":"Argentina","AS":"American Samoa","AT":"Austria","AU":"Australia","AW":"Aruba","AX":"\u00c5land Islands","AZ":"Azerbaijan","BA":"Bosnia & Herzegovina","BB":"Barbados","BD":"Bangladesh","BE":"Belgium","BF":"Burkina Faso","BG":"Bulgaria","BH":"Bahrain","BI":"Burundi","BJ":"Benin","BL":"Saint Barth\u00e9lemy","BM":"Bermuda","BN":"Brunei-Darussalam","BO":"Bolivia","BQ":"Bonaire, Sint Eustatius and Saba","BR":"Brazil","BS":"Bahamas","BT":"Bhutan","BV":"Bouvet Island","BW":"Botswana","BY":"Belarus","BZ":"Belize","CA":"Canada","CC":"Cocos (Keeling) Islands","CD":"Congo, Democratic Republic","CF":"Central African Republic","CG":"Congo","CH":"Switzerland","CI":"C\u00f4te D'Ivoire (Ivory Coast)","CK":"Cook Islands","CL":"Chile","CM":"Cameroon","CN":"China","CO":"Colombia","CR":"Costa Rica","CU":"Cuba","CV":"Cape Verde","CW":"Cura\u00e7ao","CX":"Chrismas Island","CY":"Cyprus","CZ":"Czech Republic","DE":"Germany","DJ":"Djibouti","DK":"Denmark","DM":"Dominica","DO":"Dominican Republic","DZ":"Algeria","EC":"Ecuador","EE":"Estonia","EG":"Egypt","EH":"Western Sahara","ER":"Eritrea","ES":"Spain","ET":"Ethiopia","FI":"Finland","FJ":"Fiji","FK":"Falkand Islands (Malvinas)","FM":"Micronesia  (Federa States of)","FO":"Faroe Islands","FR":"France","GA":"Gabon","GB":"United Kingdom","GD":"Grenada","GE":"Georgia","GF":"French Guiana","GH":"Ghana","GI":"Gibraltar","GL":"Greenland","GM":"Gambia","GN":"Guinea","GP":"Guadeloupe","GQ":"Equatorial Guinea","GR":"Greece","GS":"South Georgia & South Sandwich Islands","GT":"Guatemala","GU":"Guam","GW":"Guinea-Bissau","GY":"Guyana","HK":"Hong Kong","HM":"Heard Island And McDonald Islands","HN":"Honduras","HR":"Croatia","HT":"Haiti","HU":"Hungary","ID":"Indonesia","IE":"Ireland","IL":"Israel","IN":"India","IO":"British Indian Ocean Territory","IQ":"Iraq","IR":"Iran","IS":"Iceland","IT":"Italy","JM":"Jamaica","JO":"Jordan","JP":"Japan","KE":"Kenya","KG":"Kyrgyzstan","KH":"Cambodia","KI":"Kiribati","KM":"Comoros","KN":"St. Kitts & Nevis","KP":"North Korea","KR":"South Korea","KW":"Kuwait","KY":"Cayman Islands","KZ":"Kazakhstan","LA":"Laos","LB":"Lebanon","LC":"St. Lucia","LI":"Liechtenstein","LK":"Sri Lanka","LR":"Liberia","LS":"Lesotho","LT":"Lithuania","LU":"Luxembourg","LV":"Latvia","LY":"Libyan Arab Jamahiriya","MA":"Morocco","MC":"Monaco","MD":"Moldova, Republic of","ME":"Montenegro","MF":"Collectivity of Saint Martin","MG":"Madagascar","MH":"Marshall Islands","MK":"Macedonia  (former YR)","ML":"Mali","MM":"Myanmar (Burma)","MN":"Mongolia","MO":"Macao","MP":"Northern Mariana Islands","MQ":"Martinique","MR":"Mauritania","MS":"Montserrat","MT":"Malta","MU":"Mauritius","MV":"Maldives (Maladive Ilands)","MW":"Malawi","MX":"Mexico","MY":"Malaysia","MZ":"Mozambique","NA":"Namibia","NC":"New Caledonia","NE":"Niger","NF":"Norfolk Island","NG":"Nigeria","NI":"Nicaragua","NL":"Netherlands","NO":"Norway","NP":"Nepal","NR":"Nauru","NU":"Niue","NZ":"New Zealand","OM":"Oman","PA":"Panama","PE":"Peru","PF":"French Polynesia","PG":"Papua-New Guinea","PH":"Philippines","PK":"Pakistan","PL":"Poland","PM":"Saint Pierre And Micquelon","PN":"Pitcairn","PR":"Puerto Rico","PS":"Palestinian Territory, Occupied","PT":"Portugal","PW":"Palau","PY":"Paraguay","QA":"Quatar","RE":"Reunion","RO":"Romania","RS":"Serbia","RU":"Russian Federation","RW":"Rwanda","SA":"Saudi Arabia","SB":"Solomon Islands","SC":"Seychelles","SD":"Sudan","SE":"Sweden","SG":"Singapore","SH":"Saint Helena, Ascension and Tristan da Cunha","SI":"Slovenia","SJ":"Svalbard And Jan Mayen","SK":"Slovakia","SL":"Sierra Leone","SM":"San Marino","SN":"Senegal","SO":"Somalia","SR":"Suriname","ST":"Sao Tome & Principe","SV":"El Salvador","SX":"Sint-Maarten","SY":"Syrian Arab Republic","SZ":"Swaziland","TC":"Turks And Caicos Islands","TD":"Chad","TF":"French Southern Territories","TG":"Togo","TH":"Thailand","TJ":"Tajikistan","TK":"Tokelau","TL":"Timor-Leste","TM":"Turkmenistan","TN":"Tunisia","TO":"Tonga","TR":"Turkey","TT":"Trinidad & Tobago","TV":"Tuvalu","TW":"Taiwan","TZ":"Tanzania","UA":"Ukraine","UG":"Uganda","UM":"United States Minor Outlying Islands","US":"United States","UY":"Uruguay","UZ":"Uzbekistan","VA":"Vatican City","VC":"St. Vincent & Grenadines","VE":"Venezuela","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","VN":"Vietnam","VU":"Vanuatu","WF":"Wallis And Futuna","WS":"Western Samoa","YE":"Yemen","YT":"Mayotte","ZA":"South Africa","ZM":"Zambia","ZW":"Zimbabwe"}]]></con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:afterRunScript><![CDATA[/**
+ @Author : Matthias Dirickx
+ @Description : Collecting statuses and copying them to a file - based on the 'set endpoint' script from Pradeep Bishnoi
+ https://learnsoapui.wordpress.com/2012/04/27/want-to-change-endpoInteger-url-in-a-projecttestsuitestestcases/
+  
+  * This script retrieves the static statuses from all items in a project and then exports those results to a simple html file.
+  * There is no extra css file or other stuff included. So you can happily pass around the html without worrying about making available additional resources.
+  *Assumptions:
+  *  - there is a variable testDataPath
+  *  - The variable testDataPath is set as JAVA String (backslashes are doubled because of escape function)
+  *  - The path ends with a double backslash
+  *  - Alternatively you can just use forward slashes of course. And then you normally don't have to double them.
+  *  - The path results are written to the 'Execution Results' folder
+  *  - Name of file is set automatically to soapUIProjectName+date time stamp
+  *  - When all steps are passed, the test case is VALID
+  *  - When one step fails, the test case is set to FAILED
+  *  - In any other case the test case result is set to UNKNOWN
+  *  - There is a count summary. Items that are disabled are not taken into account for the totals of this statistic.
+ @Usage : Make the script available through a SoapUi Interface implementation or put it in a project tear-down script.
+ Alternatively you may add it to a SoapUI custom action.
+ Example implementation: https://fuckagile.wordpress.com/2016/08/17/soapui-action-architecture-and-the-groovy-script-engine/
+ */
+
+import java.awt.Desktop;
+import java.lang.Math;
+
+import com.eviware.soapui.support.UISupport;
+
+
+
+
+/*Properties
+  --> wrap in function because otherwise soapui complains about variable not found in class.
+*/
+private String getHeaderImageUrl() {
+    return "https://i.imgur.com/MXXgjzP.png"
+}
+
+
+
+///////////////////////////////////////////////////
+//    LAUNCH SCRIPT                             //
+/////////////////////////////////////////////////
+writeReportToDisk(buildHtmlPage());
+
+
+
+///////////////////////////////////////////////////
+//    HELPER METHODS                            //
+/////////////////////////////////////////////////
+public boolean isAssertable(Class<?> claz) {
+    boolean isAssertable = com.eviware.soapui.model.testsuite.Assertable.class.isAssignableFrom(claz);
+    return isAssertable;
+}
+
+private String deriveTestCaseStatus(tc) {
+    
+    def tsStatusList = [];
+    def tcStatus;
+    testStepList = tc.getTestStepList();
+
+    testStepList.each {
+        
+        if(isAssertable(it.class) && it.getAssertionStatus()!=null) {
+          tsStatusList.add(it.getAssertionStatus().toString());
+        }
+
+    }
+
+    if(tsStatusList.contains('FAILED')) {
+        tcStatus = 'FAILED';
+    } else if(tsStatusList.every{it.equals('VALID');}){
+        tcStatus = 'VALID';
+    } else {
+        tcStatus = 'UNKNOWN';
+    }
+    
+    return tcStatus;
+}
+
+private String deriveTestSuiteStatus(tcStatusCollection) {
+    
+    def testSuiteStatus;
+    
+    if(tcStatusCollection.contains('FAILED')) {
+        tcStatus = 'FAILED';
+    } else if(tcStatusCollection.every{it.equals('VALID');}){
+        tcStatus = 'VALID';
+    } else {
+        tcStatusCollection = 'UNKNOWN';
+    }
+
+    return testSuiteStatus;
+}
+
+private String getStatusClass(String status) {
+    
+    statusClass = null;
+    
+    switch (status) {
+        case 'VALID' : statusClass = 'pass';
+        break;
+        case 'FAILED' : statusClass = 'fail';
+        break;
+        default : statusClass = 'defaultStatus';
+    }
+    
+    return statusClass;
+}
+
+
+
+///////////////////////////////////////////////////
+//    Build Table Methods                       //
+/////////////////////////////////////////////////
+
+/*
+The details table contains the item by item information.
+- Title with testsuite name
+- Per test case:
+    - The title
+    - A table per step with:
+        - assertion type
+        - assertion name
+        - assertion status
+        - assertion message
+*/
+//////////DETAILS//////////////////////////////////////////////////////
+public String getDetailTableData() {
+
+    def StringBuilder detail = new StringBuilder()
+    //get test suites
+    testSuites = project.getTestSuiteList()
+
+    //iterate over suites
+    testSuites.each {
+      
+        if(!it.isDisabled()) {
+      
+            testsuiteName = it.getName()
+            testsuiteId = it.getId()
+            testsuiteDescription = it.getDescription()
+
+            detail.append("<h3><a name=\"$testsuiteId\">$testsuiteName</a></h3>")
+            detail.append("<div class=\"testCaseDescription\">")
+                detail.append("<span style=\"vertical-align:middle;\">")
+                    detail.append("<b>Test Suite Description:</b><br>")
+                    detail.append("$testsuiteDescription")
+                detail.append("</span>")
+            detail.append("</div>")
+
+            //get test cases
+            testCases = it.getTestCaseList()
+      
+            //iterate over test cases
+            testCases.each {
+
+                if(!it.isDisabled()) {
+                    testcaseName = it.getName()
+                    testcaseId = it.getId()
+                    testcaseDescription = it.getDescription()
+                    
+                    detail.append("<h4><a name=\"$testcaseId\">$testcaseName</a></h4>")
+                    detail.append("<div class=\"testCaseDescription\">")
+                        detail.append("<span style=\"vertical-align:middle;\">")
+                            detail.append("<b>Test Case Description:</b><br>")
+                            detail.append("$testcaseDescription")
+                        detail.append("</span>")
+                    detail.append("</div>")
+                  
+                    testSteps = it.getTestStepList()
+                    
+                    detail.append("<fieldset>")
+                    detail.append("<legend>Test Case Steps</legend>")
+                    
+                    testSteps.each {
+                        teststepName = it.label
+                        teststepType = it.getClass().getSimpleName()
+                
+                        detail.append("<table>")
+                            detail.append("<caption><h5>$teststepName<span style=\"font-weight:normal;font-size:italic;\"> ($teststepType)</span></h5></caption>")
+                            detail.append("<tr>")
+                                detail.append("<th>Type</th>")
+                                detail.append("<th>Name</th>")
+                                detail.append("<th>Status</th>")
+                                detail.append("<th>Errors</th>")
+                            detail.append("</tr>")
+
+                        if(!it.isDisabled()) {
+
+                            //assertable content check
+                            if(isAssertable(it.class)) {
+                                testStepStatus = it.getAssertionStatus()
+                                assertionList = it.getAssertionList()
+                          
+                                //testAssertion list
+                                if(assertionList.size()>0){
+                                    assertionList.each {
+                                        assertionName = it.label
+                                        assertionStatus = it.status
+                                        assertionType = it.getClass().getSimpleName()
+                                      
+                                        StringBuilder assertionInfoSb = new StringBuilder()
+                                      
+                                        it.getErrors().each {
+                                            assertionInfoSb.append(it.getMessage().toString())
+                                        }
+                                        assertionInfo = assertionInfoSb.toString()
+                                        assertionStatusHtmlClass = getStatusClass(assertionStatus.toString())
+                              
+                                        detail.append("<tr>")
+                                            detail.append("<td>$assertionType</td>")
+                                            detail.append("<td>$assertionName</td>")
+                                            detail.append("<td class=\"$assertionStatusHtmlClass\">$assertionStatus</td>")
+                                            detail.append("<td>$assertionInfo</td>")
+                                        detail.append("</tr>")
+                                    }
+                                //If no assertions are available    
+                                } else {
+                                    detail.append("<tr><td colspan=\"4\">There are no assertions available for this test step.</td></tr>")
+                                }
+                            //If the test step is not assertable
+                            }  else {
+                                detail.append("<tr><td colspan=\"4\">This test step is not assertable.</td></tr>")
+                            }
+                        }    
+                  
+                        detail.append("</table>")
+                    }
+                    detail.append("</fieldset>")
+                }
+            }
+        }
+    }
+    
+    return detail
+}
+///////////////////////////////////////////////////////////////////////
+
+//////////OVERVIEW/////////////////////////////////////////////////////
+public String getOverviewTableData() {
+
+    def StringBuilder overview = new StringBuilder()
+    
+    overview.append("<table class=\"listOverview\">")
+        overview.append("<caption>Test Suites &amp; Test Cases</caption>")
+        overview.append("<tbody>")
+            overview.append("<tr>")
+                overview.append("<th>Test Suite Name</th>")
+                overview.append("<th>Test Case Name</th>")
+                overview.append("<th>Test Case Status</th>")
+            overview.append("</tr>")
+    
+    //get test suites
+    testSuites = project.getTestSuiteList()
+
+    //iterate over suites
+    testSuites.each {
+      
+        //Reset test case status collector
+        tcStatusCollector = [];
+      
+        if(!it.isDisabled()) {
+      
+            testsuiteName = it.label
+            testsuiteId = it.getId()
+
+            //get test cases
+            testCases = it.getTestCaseList()
+      
+            //iterate over test cases
+            firstTestCase = true
+            Integer testCaseCount=0
+          
+            testCases.each {
+            
+                if(!it.isDisabled()) {
+                    testCaseCount++
+                }
+            }
+
+            testCases.each {
+                if(!it.isDisabled()) {
+                    testcaseName = it.label
+                    testcaseId = it.getId()
+               
+                    //get the test case status (indirect - binary pass fail)
+                    testcaseStatus = deriveTestCaseStatus(it)
+                    tcStatusCollector.add(testcaseStatus)
+                    statusHtmlClass = getStatusClass(testcaseStatus)
+
+                    overview.append("<tr>")
+                    
+                    if(firstTestCase) {
+                        overview.append("<td class=\"hooverable\" rowspan=\"$testCaseCount\"><a href=\"#$testsuiteId\"><div class=\"linkBlock\">$testsuiteName</div></a></td>")
+                    }
+                        overview.append("<td class=\"hooverable\"><a href=\"#$testcaseId\"><div class=\"linkBlock\">$testcaseName</div></a></td>")
+                        overview.append("<td class=\"$statusHtmlClass\">$testcaseStatus</td>")
+                    overview.append("</tr>")
+               
+                    firstTestCase = false
+                }   
+            }
+            
+            testSuiteStatus = deriveTestSuiteStatus(tcStatusCollector)
+        }
+    }
+    overview.append("</tbody>")
+    overview.append("</table>")
+    
+    return overview
+}
+///////////////////////////////////////////////////////////////////////////////////
+
+//////////////NUMERIC OVERVIEW TABLE///////////////////////////////////////////////
+/**
+* The setup is as follows:
+*     Initialize the counters ( initialize at value 0 )
+*
+*     Next, there are a series of nested iterations.
+* 
+*     Test suites --> Test cases --> Test steps --> Assertions
+* 
+*     At each level:
+*
+*         1. Add to the total
+*         2. Initialize a list for statuses if needed
+*         3. Check if enabled
+*             3.1 If enabled --> Dive deeper and start at 1
+*             3.2 If not enabled --> Add 1 to 'disabled' counter for:
+*                     - the item in question
+*                     - each child item down to the level of assertions
+*         4. Add 1 to correct counter
+*
+*     After these counter updates, these are used in generating the table.
+*
+*     The table is generated rediculously verbose in order to make the code accesible.
+**/
+private String getCountTable() {
+    // Initialize the count
+    Integer testSuitePass = 0;
+    Integer testSuiteFail = 0;
+    Integer testSuiteUnknown = 0;
+    Integer testSuiteDisabled = 0;
+    Integer testSuiteTotal = 0;
+    Integer testCasePass = 0;
+    Integer testCaseFail = 0;
+    Integer testCaseUnknown = 0;
+    Integer testCaseDisabled = 0;
+    Integer testCaseTotal = 0;
+    Integer testStepPass = 0;
+    Integer testStepFail = 0;
+    Integer testStepUnknown = 0;
+    Integer testStepDisabled = 0;
+    Integer testStepTotal = 0;
+    Integer testAssertionPass = 0;
+    Integer testAssertionFail = 0;
+    Integer testAssertionUnknown = 0;
+    Integer testAssertionDisabled = 0;
+    Integer testAssertionTotal = 0;
+
+    // Get the test suites
+    testSuites = project.getTestSuiteList();
+
+    // For each suite, check suite status and dive into child items.
+    testSuites.each {
+        if(!it.isDisabled()) {
+            // Add 1 to total of test suites.
+            // Added here after isDisabled check because only enabled are counted for stats.
+            // Choice, change if you like.
+            testSuiteTotal++;
+
+            def caseStatusList = [];
+
+            testCases = it.getTestCaseList();
+
+            testCases.each {
+                def testcaseStatus = "UNKNOWN";
+                
+                if(!it.isDisabled()) {
+                    testCaseTotal++;
+
+                    def stepStatusList = [];
+
+                    testSteps = it.getTestStepList();
+                    
+                    testSteps.each {
+                        
+                        if(!it.isDisabled()) {
+                            testStepTotal++;
+
+                            if(isAssertable(it.class) && it.getAssertionStatus() != null) {
+                                def testStepStatus = it.getAssertionStatus().toString();
+
+                                if (testStepStatus == 'VALID') {
+                                    testStepPass++;
+                                } else {
+                                    if(testStepStatus == 'FAILED') {
+                                        testStepFail++;
+                                    } else {
+                                        testStepUnknown++;
+                                    }
+                                }
+
+                                stepStatusList.add(testStepStatus);
+
+                                def testAssertions = it.getAssertionList();
+
+                                testAssertions.each {
+                                    
+                                    if(!it.isDisabled()) {
+                                        testAssertionTotal++;
+
+                                        def assertionStatus = it.status;
+                                        if (assertionStatus.toString() == "VALID") {
+                                          testAssertionPass++;
+                                        } else {
+                                          if(assertionStatus.toString() == "FAILED") {
+                                            testAssertionFail++;
+                                          } else {
+                                            testAssertionUnknown++;
+                                          }
+                                        }
+                                    } else {
+                                        testAssertionDisabled++;
+                                    }
+                                }//end of testassertions.each
+                            } else {
+                                //skip this case (not assertable) --> do not do anything
+                            }
+
+                        } else {//test step else
+                            testStepDisabled++;
+                            if(isAssertable(it.class)) {
+                                it.getAssertionList().each {
+                                    testAssertionDisabled++;
+                                }
+                            }
+                        }
+                    }//End of teststeps.each
+
+                    if(stepStatusList.contains('FAILED')) {
+                        testcaseStatus = 'FAILED';
+                        testCaseFail++;
+                    } else if(stepStatusList.every{it.equals('VALID');}){
+                        testcaseStatus = 'VALID';
+                        testCasePass++;
+                    } else {
+                        testcaseStatus = 'UNKNOWN';
+                        testCaseUnknown++;
+                    }
+
+                    caseStatusList.add(testcaseStatus);
+
+                } else {//test case else
+                    testCaseDisabled++;
+                    it.getTestStepList().each {
+                        testStepDisabled++;
+                        if(isAssertable(it.class)) {
+                            it.getAssertionList().each {
+                                testAssertionDisabled++;
+                            }
+                        }
+                    }
+                }
+            }//end of testcases.each
+
+            if(caseStatusList.contains('FAILED')) {
+                testSuiteFail++;
+            } else if(caseStatusList.every{it.equals('VALID');}){
+                testSuitePass++;
+            } else {
+                testSuiteUnknown++;
+            }
+
+        } else {//test suite else
+            testSuiteDisabled++;
+            it.getTestCaseList().each {
+                testCaseDisabled++;
+                it.getTestStepList().each {
+                    testStepDisabled++;
+                    if(isAssertable(it.class)) {
+                        it.getAssertionList().each {
+                            testAssertionDisabled++;
+                        }
+                    }
+                }
+            }
+        }//end of else
+    }//end of testsuites.each
+    
+    //Initialize stringbuilder
+    def StringBuilder overview = new StringBuilder();
+    
+
+    //Build html - No loops and iteration because then there needs to be an object instead of just x integers we can use.
+    overview.append("<table class=\"numOverview\">")
+        overview.append("<caption>Numeric Overview</caption>")
+        overview.append("<tbody>")
+
+            overview.append("<tr>")
+                overview.append("<th>Level</th>")
+                overview.append("<th>Passed</th>")
+                overview.append("<th>Failed</th>")
+                overview.append("<th>Unknown</th>")
+                overview.append("<th>Total</th>")
+            overview.append("</tr>")
+
+            overview.append("<tr>")
+                overview.append("<th>Test Suite</th>")
+                //This is repeated x times for each status on each level
+                overview.append("<td>")
+                    //Center overlay is to display the count (transparant, only text visible)
+                    overview.append("<div class=\"centerOverLay\">$testSuitePass</div>")
+                    //Calculate the % width of the overlay to hide the fade bar.
+                    //The fade bar is put on screen in full, and a white rectangle covers the part we don't need.
+                    //Hence 100 - x
+                    width = 100 - Math.round((testSuitePass / testSuiteTotal) * 100)
+                    //Set the div to hide the part of the fade we don't need
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    //Set up the fade bar over the width of the td item.
+                    overview.append("<div class=\"greenFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testSuiteFail</div>")
+                    width = 100 - Math.round((testSuiteFail / testSuiteTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"redFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testSuiteUnknown</div>")
+                    width = 100 - Math.round((testSuiteUnknown / testSuiteTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:100%\">&nbsp;</div>")
+                    overview.append("<div class=\"orangeFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td class=\"defaultStatus\">$testSuiteTotal</td>")
+            overview.append("</tr>")
+            overview.append("<tr>")
+                overview.append("<th>Test Case</th>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testCasePass</div>")
+                    width = 100 - Math.round((testCasePass / testCaseTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"greenFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testCaseFail</div>")
+                    width = 100 - Math.round((testCaseFail / testCaseTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"redFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testCaseUnknown</div>")
+                    width = 100 - Math.round((testCaseUnknown / testCaseTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"orangeFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td class=\"defaultStatus\">$testCaseTotal</td>")
+            overview.append("</tr>")
+            overview.append("<tr>")
+                overview.append("<th>Test Step</th>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testStepPass</div>")
+                    width = 100 - Math.round((testStepPass / testStepTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"greenFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testStepFail</div>")
+                    width = 100 - Math.round((testStepFail / testStepTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"redFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testStepUnknown</div>")
+                    width = 100 - Math.round((testStepUnknown / testStepTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"orangeFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td class=\"defaultStatus\">$testStepTotal</td>")
+            overview.append("</tr>")
+            overview.append("<tr>")
+                overview.append("<th>Test Assertion</th>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testAssertionPass</div>")
+                    width = 100 - Math.round((testAssertionPass / testAssertionTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"greenFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testAssertionFail</div>")
+                    width = 100 - Math.round((testAssertionFail / testAssertionTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"redFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td>")
+                    overview.append("<div class=\"centerOverLay\">$testAssertionUnknown</div>")
+                    width = 100 - Math.round((testAssertionUnknown / testAssertionTotal) * 100)
+                    overview.append("<div class=\"coverFade\" style=\"width:$width%\">&nbsp;</div>")
+                    overview.append("<div class=\"orangeFadeBar\">&nbsp;</div>")
+                overview.append("</td>")
+                overview.append("<td class=\"defaultStatus\">$testAssertionTotal</td>")
+            overview.append("</tr>")
+        overview.append("</tbody>")
+    overview.append("</table>")
+
+    return overview;
+
+}//end of method
+//////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////
+//    Build Page Methods                        //
+/////////////////////////////////////////////////
+
+public String buildHtmlPage() {
+  StringBuilder htmlPage = new StringBuilder()
+     //Start page + markup (css)
+     htmlPage.append("<html>")
+         htmlPage.append("<head>")
+             htmlPage.append("<style>")
+                htmlPage.append('body {counter-reset: h3;}')
+                htmlPage.append('div.parentContainer {width: 70%;margin-left: auto;margin-right: auto; margin-top: 100px;flex:1;}')
+                htmlPage.append('div.banner {position:fixed;top: 0;bottom: 0;left: 0;right: 0;background: linear-gradient(to right, DodgerBlue, white, DodgerBlue); height: 90px; width: 100%; z-index: 1;}')
+                htmlPage.append('div.defaultContainer {width: 100%;overflow: auto;}')
+                htmlPage.append('img.headerImage {position:absolute;display:table;top: 0;bottom: 0;left: 0;right: 0;height: 60px;width: auto;margin:auto;margin-left: auto;margin-right: auto;z-index:2;}')
+                htmlPage.append('div.testCaseDescription {border-radius: 10px;background-color: #cccccc;padding: 8px;margin-bottom: 10px;font-weight:normal;white-space:pre-wrap;}')
+                htmlPage.append('h1 {text-align: center;font-weight: bold;}')
+                htmlPage.append('h3 {text-indent: 20px;counter-reset: h4;}')
+                htmlPage.append('h4 {text-indent: 40px;counter-reset: h5;}')
+                htmlPage.append('h5 {text-indent: 60px;}')
+                htmlPage.append('h3:before {content:counter(h3,decimal)"  ";counter-increment: h3;}')
+                htmlPage.append('h4:before {content:counter(h3,decimal)"."counter(h4,decimal)"  ";counter-increment: h4;}')
+                htmlPage.append('h5:before {content:counter(h3,decimal)"."counter(h4,decimal)"."counter(h5,decimal)"  ";counter-increment: h5;}')
+                htmlPage.append('table {font-family: arial, sans-serif;border-collapse: collapse;width: 100%;min-width:400px;margin-bottom:20px;border:1px solid;}')
+                htmlPage.append('table.testDetail {}')
+                htmlPage.append('table.testDetail col.type {width:150px;}')
+                htmlPage.append('table.testDetail col.name {width:350px;}')
+                htmlPage.append('table.testDetail col.status {width:120px;}')
+                htmlPage.append('table.testDetail col.error {}')
+                htmlPage.append('table.listOverview {width: auto;min-width: 33%;max-width: 66%;border:none;display:inline-block;}')
+                htmlPage.append('table.numOverview {max-width:30%;vertical-align: top;border:none; float: right;}')
+                htmlPage.append('caption {text-align: left;font-size: 14px;font-weight: bold;padding-bottom: 8px}')
+                htmlPage.append('tr {height: 100%;}')
+                htmlPage.append('td, th {padding: 8px;border: 1px solid black;font-size: 12px;position:relative;}')
+                htmlPage.append('td.pass {background-color:green;color:white;font-weight: bold;text-align: center;}')
+                htmlPage.append('td.fail {background-color: red;color: white;font-weight: bold;text-align: center;}')
+                htmlPage.append('td.defaultStatus {text-align: center;}')
+                htmlPage.append('td.hooverable{}')
+                htmlPage.append('table.numOverview th {}')
+                htmlPage.append('table.numOverview td {width:18%;padding-left:0px;padding-right:0px;}')
+                htmlPage.append('div.linkBlock {width:100%;height:100%;padding:0px;display:inline-block;}')
+                htmlPage.append('div.greenFadeBar {position:absolute;top: 0;bottom: 0;left: 0;right: 0;height:100%;background:linear-gradient(to right, white, green 85%);z-index: -2;width: 100%;}')
+                htmlPage.append('div.redFadeBar {position:absolute;top: 0;bottom: 0;left: 0;right: 0;height:100%;background: linear-gradient(to right, white, red 25%);z-index: -2;width: 100%;}')
+                htmlPage.append('div.orangeFadeBar {position:absolute;top: 0;bottom: 0;left: 0;right: 0;height:100%;background: linear-gradient(to right, white, orange 50%);z-index: -2;width: 100%;}')
+                htmlPage.append('div.coverFade {position:absolute;right: 0;top:0;height:100%;background-color: white;z-index: -1;float:right;}')
+                htmlPage.append('div.centerOverLay {position:absolute;display:table;top: 0;bottom: 0;left: 0;right: 0;margin:auto;z-index: 0;width:20px;font-weight:bold;font-size:14px;}')
+                htmlPage.append('table.listOverview td.hooverable:hover {background-color: #cccccc;}')
+                htmlPage.append('@media screen and (max-width: 1400px) {table.numOverview {width: 100%;float:none;}')
+             htmlPage.append("</style>")
+         htmlPage.append("</head>")
+         htmlPage.append("<body>")
+            htmlPage.append("<div class=\"banner\">")
+                htmlPage.append("<img class=\"headerImage\" src=\"" + getHeaderImageUrl() + "\"/>")
+            htmlPage.append("</div>")
+            htmlPage.append("<div class=\"parentContainer\">")
+                 //retrieve project name
+                 projectName = project.getName()
+                 projectPath = project.getPath()
+                 projectDescription = project.getDescription().replace(/(?:\r\n|\r|\n)/, '<br>')
+
+                 //Set main title (project name)
+                 htmlPage.append("<h1>$projectName</h1>")
+                 htmlPage.append("<div class=\"testCaseDescription\">")
+                      htmlPage.append("<span style=\"vertical-align:middle;\">")
+                          htmlPage.append("<b>Project file location:</b> $projectPath")
+                      htmlPage.append("</span>")
+                  htmlPage.append("</div>")
+
+                  htmlPage.append("<div class=\"testCaseDescription\">")
+                      htmlPage.append("<span style=\"vertical-align:middle;\">")
+                          htmlPage.append("<b>Project Description:</b><br>")
+                          htmlPage.append("$projectDescription")
+                      htmlPage.append("</span>")
+                  htmlPage.append("</div>")
+
+                 //set subtitle 'Overview' + add overview table
+                 htmlPage.append("<h2>Overview</h2>")
+                 htmlPage.append(getCountTable())
+                 htmlPage.append(getOverviewTableData())
+
+                 //set subtitle 'Details' + add details table
+                 htmlPage.append("<h2>Details</h2>")
+                 htmlPage.append(getDetailTableData())
+
+             //End page (close main div, body and html tags)
+             htmlPage.append("</div>")
+         htmlPage.append("</body>")
+     htmlPage.append("</html>")
+     
+     return htmlPage
+}
+
+
+
+///////////////////////////////////////////////////
+//    WRITE FILE TO DISK                        //
+/////////////////////////////////////////////////
+public void writeReportToDisk(String htmlPage) {
+    //set up variables for writing the file
+    Date now = new Date()
+    def timestamp = now.toTimestamp().toString().replaceAll(':','')
+    projectName = project.getName()
+    String baseLoc = project.getPropertyValue("testDataPath");
+    if (baseLoc == null || "".equals(baseLoc)) {
+        baseLoc = "C:\\SoapUI Reports\\"
+        UISupport.showInfoMessage('There was not project-level property "testDataPath" defined.\nThe report will be saved in C:/Tools/Reports.')
+    }
+    
+    // Create a File object representing the target folder
+    def folder = new File( baseLoc + "Execution results" )
+ 
+    // If it doesn't exist
+    if( !folder.exists() ) {
+        // Create all folders
+        folder.mkdirs()
+    }
+ 
+    def fileName = projectName + "_" + timestamp + ".html"
+    // Then, write to the file inside the folder
+    def targetFile = new File( folder, fileName )
+    targetFile.withWriterAppend { w -> w << htmlPage}
+    
+    //Now open the report in the standard browser (only on windows - commandline command)
+    Desktop.getDesktop().browse(targetFile.toURI());
+}]]></con:afterRunScript><con:sensitiveInformation/></con:soapui-project>
