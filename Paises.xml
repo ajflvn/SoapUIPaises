@@ -2048,12 +2048,14 @@ public void writeReportToDisk(String htmlPage) {
     
     // Create a File object representing the target folder
     def folder = new File( baseLoc + "Paises" )
- 
+
+    def created = true
     // If it doesn't exist
     if( !folder.exists() ) {
         // Create all folders
-        folder.mkdirs()
+        created = folder.mkdirs()
     }
+    println("Folder" + (created ? "" : " NOT") + " created")
  
     def fileName = projectName + "_" + timestamp + ".html"
     // Then, write to the file inside the folder
